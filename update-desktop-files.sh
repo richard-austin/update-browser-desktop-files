@@ -5,22 +5,23 @@ declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.deskto
                          "/usr/share/applications/google-chrome-beta.desktop"
                          "/usr/share/applications/google-chrome.desktop"
                          "/usr/share/applications/microsoft-edge.desktop")
+
 params="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
 
 for input in "${desktopFiles[@]}"
 do
-  tmpFile=$input.tmp
-  printf "" > $tmpFile
+  tmpFile=$(basename "$input".tmp)
+  printf "" > "$tmpFile"
   while read -r line
     do
       if [[ $line == Exec*  &&  $line != *$params ]]
       then
-          echo $line" "$params >> $tmpFile
+          echo "$line"" "$params >> "$tmpFile"
       else
-          echo $line >> $tmpFile
+          echo "$line" >> "$tmpFile"
       fi
   done < "$input"
-  cp $tmpFile $input
-  rm $tmpFile
+  cp "$tmpFile" "$input"
+  rm "$tmpFile"
 done
 
