@@ -7,7 +7,7 @@ To make these permanent, you can put them at the end of lines starting with "Exe
 This is straightforward enough, but the problem is, whenever there is a software update to any of these browsers, its 
 .desktop file is overwritten so you have to do it again. After getting fed up with this, I decided to write this script.
 
-Run it as root and it will ensure that any Exec lines in thew listed desktop files that don't end in the required 
+Run it as root and it will ensure that any Exec lines in the listed desktop files that don't end in the required 
 parameters will have them appended, Any that still do have them will be left alone.
 
 ## Setting up
