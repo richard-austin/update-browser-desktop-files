@@ -10,18 +10,22 @@ params="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLi
 
 for input in "${desktopFiles[@]}"
 do
-  tmpFile=$(basename "$input".tmp)
+  tmpFile=/tmp/$(basename "$input".tmp)
   printf "" > "$tmpFile"
+  fileChanged=false
   while read -r line
     do
       if [[ $line == Exec*  &&  $line != *$params ]]
       then
           echo "$line"" "$params >> "$tmpFile"
+          fileChanged=true
       else
           echo "$line" >> "$tmpFile"
       fi
   done < "$input"
-  cp "$tmpFile" "$input"
+  if $fileChanged; then
+    cp "$tmpFile" "$input"
+  fi
   rm "$tmpFile"
 done
 
