@@ -24,7 +24,7 @@ do
       fi
   done < "$input"
   if $fileChanged; then
-    cp "$tmpFile" "$input"
+    cp "$tmpFile" "$HOME/.local/share/applications/$(basename -a "$input")"
   fi
   rm "$tmpFile"
 done
