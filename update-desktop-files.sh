@@ -3,7 +3,7 @@
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
                          "/var/lib/snapd/desktop/applications/chromium_chromium.desktop")
 
-params="--enable-features=AcceleratedVideoDecodeLinuxGL"
+params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 
 declare -a desktopFiles2=("/usr/share/applications/google-chrome-beta.desktop"
                          "/usr/share/applications/google-chrome.desktop"

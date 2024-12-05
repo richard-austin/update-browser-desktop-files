@@ -22,12 +22,15 @@ The desktopFiles arrays should have corresponding command line parameters which 
 listed in that array. The arrays should contain the full paths of all the browser desktop files you want to be able to keep the
 corresponding command line parameters on. Mine are :-
 
+For Browsers based on Chromium >= version 131 
 ```bash
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
                          "/var/lib/snapd/desktop/applications/chromium_chromium.desktop")
 
-params="--enable-features=AcceleratedVideoDecodeLinuxGL"
-
+params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
+```
+For browsers based on Chromium < version 131
+```bash
 declare -a desktopFiles2=("/usr/share/applications/google-chrome-beta.desktop"
                          "/usr/share/applications/google-chrome.desktop"
                          "/usr/share/applications/microsoft-edge.desktop")
