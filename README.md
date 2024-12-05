@@ -31,8 +31,7 @@ params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideo
 ```
 For browsers based on Chromium < version 131
 ```bash
-declare -a desktopFiles2=("/usr/share/applications/google-chrome-beta.desktop"
-                         "/usr/share/applications/google-chrome.desktop"
+declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop"
                          "/usr/share/applications/microsoft-edge.desktop")
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"

@@ -5,8 +5,7 @@ declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.deskto
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 
-declare -a desktopFiles2=("/usr/share/applications/google-chrome-beta.desktop"
-                         "/usr/share/applications/google-chrome.desktop"
+declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop"
                          "/usr/share/applications/microsoft-edge.desktop")
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
