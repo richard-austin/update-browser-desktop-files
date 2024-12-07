@@ -25,14 +25,14 @@ corresponding command line parameters on. Mine are :-
 For Browsers based on Chromium >= version 131 
 ```bash
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
-                         "/var/lib/snapd/desktop/applications/chromium_chromium.desktop")
+                         "/var/lib/snapd/desktop/applications/chromium_chromium.desktop"
+                         "/usr/share/applications/microsoft-edge.desktop")
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 ```
 For browsers based on Chromium < version 131
 ```bash
-declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop"
-                         "/usr/share/applications/microsoft-edge.desktop")
+declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop")
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
 ```

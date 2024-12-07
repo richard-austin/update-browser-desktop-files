@@ -1,12 +1,12 @@
 #!/bin/bash
 
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
-                         "/var/lib/snapd/desktop/applications/chromium_chromium.desktop")
+                         "/var/lib/snapd/desktop/applications/chromium_chromium.desktop"
+                         "/usr/share/applications/microsoft-edge.desktop")
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 
-declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop"
-                         "/usr/share/applications/microsoft-edge.desktop")
+declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop")
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
 
