@@ -26,13 +26,14 @@ For Browsers based on Chromium >= version 131
 ```bash
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
                          "/var/lib/snapd/desktop/applications/chromium_chromium.desktop"
-                         "/usr/share/applications/microsoft-edge.desktop")
+                         "/usr/share/applications/microsoft-edge.desktop"
+                         "/usr/share/applications/google-chrome.desktop")
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 ```
 For browsers based on Chromium < version 131
 ```bash
-declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop")
+declare -a desktopFiles2=()  # None now, all browsers upgraded to version 131
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
 ```

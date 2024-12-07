@@ -2,11 +2,12 @@
 
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
                          "/var/lib/snapd/desktop/applications/chromium_chromium.desktop"
-                         "/usr/share/applications/microsoft-edge.desktop")
+                         "/usr/share/applications/microsoft-edge.desktop"
+                         "/usr/share/applications/google-chrome.desktop")
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 
-declare -a desktopFiles2=("/usr/share/applications/google-chrome.desktop")
+declare -a desktopFiles2=()  # None now, all browsers upgraded to version 131
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
 
@@ -39,4 +40,4 @@ function processDeskTopFiles() {
 }
 
 processDeskTopFiles $params "${desktopFiles[@]}"
-processDeskTopFiles $params2 "${desktopFiles2[@]}"
+# processDeskTopFiles $params2 "${desktopFiles2[@]}"
