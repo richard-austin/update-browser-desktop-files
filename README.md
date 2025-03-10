@@ -27,7 +27,8 @@ For Browsers based on Chromium >= version 131
 declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
                          "/var/lib/snapd/desktop/applications/chromium_chromium.desktop"
                          "/usr/share/applications/microsoft-edge.desktop"
-                         "/usr/share/applications/google-chrome.desktop")
+                         "/usr/share/applications/google-chrome.desktop"
+                         "/usr/share/applications/vivaldi-stable.desktop")
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 ```
