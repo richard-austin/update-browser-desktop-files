@@ -7,7 +7,7 @@ params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideo
 declare -a desktopFiles2=()  # None now, all browsers upgraded to version 131
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
-chro
+
 function processDeskTopFiles() {
   dtf=("$@")
   first=true
