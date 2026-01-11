@@ -1,17 +1,13 @@
 #!/bin/bash
 
-declare -a desktopFiles=("/var/lib/snapd/desktop/applications/brave_brave.desktop"
-                         "/var/lib/snapd/desktop/applications/chromium_chromium.desktop"
-                         "/usr/share/applications/microsoft-edge.desktop"
-                         "/usr/share/applications/google-chrome.desktop"
-                         "/usr/share/applications/vivaldi-stable.desktop")
+declare -a desktopFiles=("/var/lib/snapd/desktop/applications/vivaldi_vivaldi-stable.desktop")
 
 params="--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder"
 
 declare -a desktopFiles2=()  # None now, all browsers upgraded to version 131
 
 params2="--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL"
-
+chro
 function processDeskTopFiles() {
   dtf=("$@")
   first=true
